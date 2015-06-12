@@ -22,7 +22,7 @@ if numArgs >= 3:
     bowerPrefix = sys.argv[2]
 
 def shouldInclude(f, path):
-    blacklisted = ['src', 'demo', 'test', 'polymer', 'web-animations', 'build']
+    blacklisted = ['src', 'demo', 'test', 'polymer', 'web-animations', 'build', 'google-castable-video', 'google-web-components'] # last prevents double import, since google-web-components imports all, and will include the castable problem
     for blacklist in blacklisted:
         if blacklist in path: return False
     fileName, extension = os.path.splitext(f)
