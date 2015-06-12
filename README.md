@@ -3,7 +3,8 @@ Simple python script to get all the polymer imports from a bower_components dire
 
 # Usage
 
-`./get_polymer_imports bower_components` outputs a 'acceptable' HTML imports.
+`./get_polymer_imports bower_components > all.html` outputs an 'acceptable' file you can then import into your `<head>` in your project's `index.html`.
+
 
 Essentially, it excludes `demo`, `test`, and `src` directories.  It also ignores the `polymer` directory, and simply uses `../bower_components/polymer/polymer.html`.
 
