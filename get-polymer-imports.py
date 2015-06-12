@@ -22,7 +22,7 @@ if numArgs >= 3:
     bowerPrefix = sys.argv[2]
 
 def shouldInclude(f, path):
-    blacklisted = ['src', 'demo', 'test', 'polymer', 'web-animations']
+    blacklisted = ['src', 'demo', 'test', 'polymer', 'web-animations', 'build']
     for blacklist in blacklisted:
         if blacklist in path: return False
     fileName, extension = os.path.splitext(f)
