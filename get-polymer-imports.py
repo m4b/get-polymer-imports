@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -8,13 +8,13 @@ import sys
 numArgs = len(sys.argv)
 
 if numArgs <= 1:
-    print 'usage: get_all_imports.py <bower_components directory> [prefix (default "..")]'
+    print ('usage: get_all_imports.py <bower_components directory> [prefix (default "..")]')
     exit(1)
 
 rootDir = sys.argv[1]
 
 if not (rootDir == "bower_components" or rootDir == "components"):
-    print 'Cowardly refusing to search non bower directory "' + rootDir + '"'
+    print ('Cowardly refusing to search non bower directory "' + rootDir + '"')
     exit(1)
 
 bowerPrefix = ".."
@@ -56,9 +56,9 @@ def htmlify(imports):
 polymer = os.path.join(bowerPrefix, rootDir, "polymer/polymer.html")
 
 def printHtml(html):
-    print tagify(polymer)
+    print (tagify(polymer))
     for tag in html:
-        print tag
+        print (tag)
 
 imports = getImports(rootDir)
 html = htmlify(imports)
