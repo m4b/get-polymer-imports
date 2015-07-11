@@ -12,7 +12,7 @@ if numArgs <= 1:
     exit(1)
 
 rootDir = os.path.normpath(sys.argv[1])
-normroot = os.path.basename(rootdir)
+normroot = os.path.basename(rootDir)
 
 if not (normroot == "bower_components" or normroot == "components"):
     print ('Cowardly refusing to search non bower directory "' + rootDir + '"')
