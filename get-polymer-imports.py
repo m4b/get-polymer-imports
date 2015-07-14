@@ -11,10 +11,9 @@ if numArgs <= 1:
     print ('usage: get_all_imports.py <bower_components directory> [prefix (default "..")]')
     exit(1)
 
-rootDir = os.path.normpath(sys.argv[1])
-normroot = os.path.basename(rootDir)
+rootDir = os.path.basename(os.path.normpath(sys.argv[1]))
 
-if not (normroot == "bower_components" or normroot == "components"):
+if not (rootDir == "bower_components" or rootDir == "components"):
     print ('Cowardly refusing to search non bower directory "' + rootDir + '"')
     exit(1)
 
